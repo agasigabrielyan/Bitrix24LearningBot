@@ -1,0 +1,306 @@
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('./fonts/Roboto-Black.woff2') format('woff2'),
+    url('./fonts/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('./fonts/Roboto-Bold.woff2') format('woff2'),
+    url('./fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('./fonts/Roboto-Light.woff2') format('woff2'),
+    url('./fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Normal';
+    src: url('./fonts/Roboto-Medium.woff2') format('woff2'),
+    url('./fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+    url('./fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('./fonts/Roboto-Thin.woff2') format('woff2'),
+    url('./fonts/Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* ----------------------------------------------------------------------------------------------------------- */
+.bx-layout-inner-inner-top-row {
+    position: fixed;
+    top: -1000000%;
+}
+
+#bot-container {
+    position: relative;
+    background-color: #F1F2F9;
+    min-height: 500px;
+    font-family: 'Roboto-Regular';
+    overflow: hidden;
+}
+
+.bot__content_inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media(max-width: 768px) {
+    .bot__content_inner {
+        width: 100%;
+    }
+}
+
+.bot h1 {
+    font-family: 'Roboto-Normal';
+    text-align: center;
+    color: #535c69;
+    margin-bottom: 45px;
+}
+
+.bot h1 > span {
+    display: inline-block;
+    position: relative;
+}
+
+.bot h1 > span:before {
+    content: "";
+    position: absolute;
+    top: calc(50% + 6px);
+    left: calc(100% + 6px);
+    width: 10000%;
+    border: 1px solid #e3e7ea;
+}
+
+.bot h1 > span:after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 6px);
+    right: calc(100% + 6px);
+    width: 10000%;
+    border: 1px solid #e3e7ea;
+}
+
+.bot h1 img {
+    width: 44px;
+}
+
+.bot__header {
+    text-align: center;
+}
+
+.bot__preloader {
+    /* background-color: #F1F2F9; */
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 750ms;
+    -moz-transition: all 750ms;
+    -o-transition: all 750ms;
+    -webkit-transition: all 750ms;
+    opacity: 1;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+.bot__preloader_hidden-opacity {
+    opacity: 0;
+}
+
+.bot__preloader_hidden-display {
+    display: none;
+}
+
+.bot__preloader img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bot__lesson {
+    margin-bottom: 120px;
+}
+
+.bot__lesson img {
+    border-radius: 0.75rem;
+}
+
+.bot__message-img {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.bot__cell {
+    opacity: 0;
+}
+
+.bot__message {
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    min-width: 0;
+    overflow: visible;
+    border-radius: 0.75rem 0.75rem 0.75rem 0.125rem;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(47, 50, 74);
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 23px;
+}
+
+.bot__message p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bot__message-img {
+    margin-top: 1rem ;
+    margin-bottom: 1rem;
+}
+
+.bot__message-img img {
+    box-shadow: 0 0 15px #ccc;
+    border-radius: 15px;
+}
+
+.bot__button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(74, 119, 168);
+    border: 0.125rem solid transparent;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.1s linear 0s;
+    height: auto;
+    line-height: 1.1;
+    white-space: normal!important;
+    width: fit-content;
+    width:-moz-fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    min-width: 220px;
+    font-size: 17px;
+    opacity: 0;
+}
+
+.bot__button:hover {
+    box-shadow: rgb(0 0 0 / 29%) 0px 6px 21px -11px, rgb(47 49 72 / 30%) 0px 13px 17px -16px;
+}
+
+.bot__button:active, .bot__button:visited {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.bot__button_next-lesson {
+    opacity: 1;
+}
+
+.bot__social {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bot__social a {
+    margin-left: 5px;
+}
+
+.bot__social a:hover img {
+    box-shadow: 0 0 5px #ccc;
+}
+
+.fancybox-toolbar{}
+.fancybox-infobar{display:none;}
+.compensate-for-scrollbar{margin-right:0px!important;}
+
+
+.start-or-continue {
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content;
+    min-width: 0;
+    overflow: visible;
+    border-radius: 0.75rem 0.75rem 0.75rem 0.125rem;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(47, 50, 74);
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 23px;
+}
+
+.button-first {
+    color: rgb(255, 255, 255);
+    background-color: rgb(74, 119, 168);
+    border: 0.125rem solid transparent;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.1s linear 0s;
+    height: auto;
+    line-height: 1.1;
+    white-space: normal!important;
+    width: fit-content;
+    width: -moz-fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    min-width: 220px;
+    font-size: 17px;
+    opacity: 0;
+    margin-right: 1rem;
+    position: relative;
+    top: 50px;
+}
+
+.button-first_start {
+    position: relative;
+}
+
+.button-first_continue {
+    position: relative;
+}
+
+.button-first:hover, .button-first:active, .button-first:visited {
+    box-shadow: 0 0 5px rgb(74, 119, 168);
+}
+
+.relation{ position:relative; }
+.relation__ratio{ padding-top:56.3%; height:0; }
+.relation iframe{ position:absolute; width:100%; height:100%; top:0; left:0 }
+
